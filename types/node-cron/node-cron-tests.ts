@@ -66,3 +66,12 @@ task5.on('task-done', () => {
     log('Task has been completed');
     task5.stop();
 });
+
+const task6 = cron.schedule('* * * * * *', async () => {
+    log('will execute every second until stopped');
+});
+
+task6.on('task-done', () => {
+    log('Task has been completed');
+    task6.stop();
+});
