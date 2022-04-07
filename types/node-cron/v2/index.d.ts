@@ -8,7 +8,7 @@
 
 import { Timezone } from 'tz-offset';
 
-export function schedule(cronExpression: string, func: () => void, options?: ScheduleOptions): ScheduledTask;
+export function schedule(cronExpression: string, func: () => void | Promise<void>, options?: ScheduleOptions): ScheduledTask;
 
 export function validate(cronExpression: string): boolean;
 
